@@ -8,7 +8,11 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import {TransformControls} from "three/examples/jsm/controls/TransformControls";
 import {CSS2DRenderer} from "three/examples/jsm/renderers/CSS2DRenderer";
 import {ObjectElevation} from "./app/drawer/constants/Types";
-import {ReadmePopup} from "./app/ReadmePopup";
+// import {ReadmePopup} from "./app/ReadmePopup";
+// import Navbar from "./Components/Navbar";
+import Cloumn from  "./Components/Cloumn";
+import PropertyForm from "../src/Components/PropertyForm"
+
 
 export type FloorPlanState = {
     cameraHandler: OrthographicCameraHandler,
@@ -99,16 +103,21 @@ export const App: React.FC = () => {
 
     return (
         <>
-            <ReadmePopup
+        {/* <Navbar></Navbar> */}
+        
+            {/* <ReadmePopup
                 isDisplayed={isReadmePopupDisplayed}
                 hide={() => setIsReadmePopupDisplayed(false)}
-            />
+            /> */}
+            <Cloumn></Cloumn>
             <MainComponent
                 renderer={renderer}
                 labelRenderer={labelRenderer}
                 floorPlanState={floorPlanState}
                 interiorArrangerState={interiorArrangerState}
             />
+            
+            {/* <PropertyForm/>  */}
         </>
     );
 };

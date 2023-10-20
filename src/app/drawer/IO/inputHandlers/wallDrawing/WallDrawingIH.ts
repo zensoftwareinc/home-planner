@@ -3,10 +3,7 @@ import { DrawingState, WallPointer } from "./WallPointer";
 import { IInputHandler } from "../../../../common/canvas/inputHandler/IInputHandler";
 import {InputPoint} from "../../../../common/canvas/inputHandler/MainInputHandler";
 
-/**
- * Stateful input handler for drawing new wall.
- * Start state is NONE, start point set to 0,0,0.
- */
+
 export class WallDrawingIH implements IInputHandler {
 
     private readonly wallDrawer: WallDrawer;

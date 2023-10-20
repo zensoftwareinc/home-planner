@@ -36,3 +36,6 @@
     transform: rotate(360deg);
   }
 }
+
+/* In your CSS file (e.g., App.css) */
+@import "~font-awesome/css/font-awesome.css";

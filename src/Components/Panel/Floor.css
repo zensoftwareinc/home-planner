@@ -1,0 +1,21 @@
+
+   .icon-container {
+     font-size: 24px; 
+    cursor: pointer;
+   display: flex;
+  }
+  
+  .content {
+    max-height: 1000px; 
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .hidden {
+    max-height: 0;
+  }
+
+  .icons-1{
+    margin-left: 15px;
+    transition: max-height 4s ease;
+  }

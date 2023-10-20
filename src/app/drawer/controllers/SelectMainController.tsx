@@ -1,9 +1,10 @@
 import React, {useContext, useEffect} from "react";
 import { MainFactoryComponentProps } from "./ControllerFactory";
 import {FloorPlanContext, MainControllerType} from "./FloorPlanMainController";
-import {Button} from "react-bootstrap";
-import {SECONDARY_VARIANT} from "../../arranger/constants/Types";
+import { Dropdown } from "react-bootstrap";
 
+import {SECONDARY_VARIANT} from "../../arranger/constants/Types";
+import './SelectMainController.css'
 export const SelectMainController: React.FC<MainFactoryComponentProps<MainControllerType>> = ({ setType }) => {
     const context = useContext(FloorPlanContext);
     if (context === undefined) {
@@ -27,16 +28,22 @@ export const SelectMainController: React.FC<MainFactoryComponentProps<MainContro
     };
 
     return (
-        <div className="side-by-side-parent">
-            <Button onClick={selectWalls} variant={SECONDARY_VARIANT} className="side-by-side-child btn-sm">
-                {MainControllerType.WALLS}
-            </Button>
-            <Button onClick={selectWindowsAndDoors} variant={SECONDARY_VARIANT} className="side-by-side-child btn-sm">
-                {MainControllerType.WINDOWS_AND_DOORS}
-            </Button>
-            <Button onClick={selectFloors} variant={SECONDARY_VARIANT} className="side-by-side-child btn-sm">
-                {MainControllerType.FLOORS}
-            </Button>
+        <div className="Mukul1 side-by-side-parent">
+            <div className="custom-dropdown">
+                <Dropdown>
+                    <Dropdown.Toggle variant={SECONDARY_VARIANT} id="dropdown-basic">
+                        Floor Plans
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu className="dropdup">
+                        <Dropdown.Item onClick={selectWalls}>{MainControllerType.WALLS}</Dropdown.Item>
+                        <Dropdown.Item onClick={selectWindowsAndDoors}>{MainControllerType.WINDOWS_AND_DOORS}</Dropdown.Item>
+                        <Dropdown.Item onClick={selectFloors}>{MainControllerType.FLOORS}</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+            </div>
         </div>
     );
+
 };
+

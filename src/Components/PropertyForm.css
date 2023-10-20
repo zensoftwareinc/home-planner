@@ -1,0 +1,74 @@
+.property-div {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    transition: all 0.3s ease-in-out;
+    float: right;
+    margin-top: -330px;
+  }
+  
+  .property-div.minimized {
+    height: 50px; 
+    overflow: hidden;
+  }
+  
+  .toggle-button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .toggle-button:hover {
+    background-color: #0056b3;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .P1 {
+    margin: 10px;
+    display: flex;
+    
+  }
+  
+  label {
+    font-weight: bold;
+    float: left;
+  }
+  
+  input {
+    width: 40%;
+    padding: 6px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 14px;
+  }
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

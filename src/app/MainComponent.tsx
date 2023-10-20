@@ -23,6 +23,8 @@ import {LoadedTexture} from "./common/models/TextureDefinition";
 import {CSS2DRenderer} from "three/examples/jsm/renderers/CSS2DRenderer";
 import {loadData, saveData} from "./common/persistance/Persistance";
 import spinner from "../loading-spinner.gif";
+// import Navbar from "../Components/Navbar";
+
 
 type Props = {
     renderer: WebGLRenderer,
@@ -60,7 +62,7 @@ export const MainComponent: React.FC<Props> = ({ renderer, labelRenderer, floorP
     const [objectDefinitions, setObjectDefinitions] = useState<Array<ObjectProps>>();
     const [texturePromises, setTexturePromises] = useState<Array<LoadedTexture>>();
 
-    // load file
+   
     const openFileRef = useRef<HTMLInputElement>(null);
 
     const handleStateLoad = () => {
@@ -69,7 +71,7 @@ export const MainComponent: React.FC<Props> = ({ renderer, labelRenderer, floorP
 
     const [currentMenu, setCurrentMenu] = useState(UISelection.FLOOR_PLAN);
 
-    // update canvasState
+   
     useEffect(() => {
         if (currentMenu === UISelection.FLOOR_PLAN) {
             canvasState.mainInputHandler.detachCurrentHandler();
@@ -169,7 +171,7 @@ export const MainComponent: React.FC<Props> = ({ renderer, labelRenderer, floorP
 
     const handleSaveRender = () => {
         const cameraHandler = getSelectionCameraHandler(currentMenu);
-        // re-render to avoid black image
+        
         renderer.render(canvasState.scene, cameraHandler.getCamera());
         labelRenderer.render(canvasState.scene, cameraHandler.getCamera());
 
@@ -256,6 +258,7 @@ const SelectController: React.FC<SelectionProps> = ({
     if (selection === UISelection.INTERIOR_ARRANGER) {
         return (
             <>
+            
                 <InteriorArrangerStateParent
                     className="app-bottom-menu"
                     renderer={renderer}
@@ -271,6 +274,7 @@ const SelectController: React.FC<SelectionProps> = ({
     } else {
         return (
             <>
+
                 <FloorPlanStateParent
                     className="app-bottom-menu"
                     renderer={renderer}

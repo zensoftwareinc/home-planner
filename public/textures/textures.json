@@ -5,5 +5,16 @@
   },
   {
     "file": "uv-map.jpg"
+  },
+  {
+    "file":"texture1.png"
+  }
+  ,
+  {
+    "file":"texture2.png"
+  }
+  ,
+  {
+    "file":"texture3.png"
   }
 ]

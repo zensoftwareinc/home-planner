@@ -1,0 +1,102 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white; 
+  cursor: cell; 
+}
+
+
+.navbar-logo>img {
+  max-width: 45px; 
+  height: auto;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 14px;
+}
+
+
+.navbar-menu-button {
+  position: relative;
+  cursor: pointer;
+  border: 2px solid red;
+  background-color: #007bff; 
+  color: white; 
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 4px; 
+  transition: background-color 0.3s;
+}
+
+
+.navbar-menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 150%;
+  left: 50%;
+  background-color: #fff; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  z-index: 1;
+  border-radius: 4px; 
+  text-align: left;
+  border-radius: 6px
+}
+
+.navbar-menu-button:hover .navbar-menu-dropdown {
+  display: block;
+  animation: fade-in 0.3s ease-in-out; /* Fade-in animation */
+}
+
+
+.navbar-menu-dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.navbar-menu-dropdown a:hover {
+  background-color: #f2f2f2; 
+  color: white; 
+  background-color: #0056b3;
+}
+
+/* .navbar-buttons{
+  margin-left: -330px;
+}
+.navbar-button {
+  background-color: #007bff; 
+  color: white; 
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px; 
+  cursor: pointer;
+  border-radius: 4px; 
+  transition: background-color 0.3s; 
+}
+
+.navbar-button:hover {
+  background-color: #0056b3; 
+} */
+
+
+.navbar-right .navbar-button {
+  margin-right: 14px; 
+}
+
+
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,19 +1,58 @@
-.app-main-view {
-  display: flex;
-  flex-flow: column;
+ .app-main-view {
+   display: flex;
+   flex-flow: column;
+   width: 95%;
+   margin-left: 50px;
+    /* border: 2px solid red; */
+ }
+
+ .app-top-menu {
+   height: 6vh;
+ }
+
+ .app-bottom-menu {
+   height: 19vh;
+   background-color: white;
+   
+ }
+
+ .app-canvas {
+   margin-top: 40px;
+   height: 68vh;
+   background-color: white;
+   flex-grow: 1;
+   /* border: 2px solid red; */
+ }
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .app-main-view {
+    width: 100%;
+  }
+  .app-canvas {
+    margin-top: 0;
+    height: auto;
+    width: 100%;
+  }
 }
 
-.app-top-menu {
-  height: 6vh;
-}
 
-.app-bottom-menu {
-  height: 19vh;
-  background-color: grey;
-}
+@media screen and (max-width: 768px) {
+  .app-main-view {
+    flex-flow: column-reverse; 
+    width: 100%;
+  }
 
-.app-canvas {
-  height: 75vh;
-  background-color: #DDDDDD;
-  flex-grow: 1;
+  .app-top-menu, .app-bottom-menu {
+    height: auto;
+  }
+  
+  .app-canvas {
+    margin-top: 0;
+    height: auto;
+    width: 100%;
+  }
 }

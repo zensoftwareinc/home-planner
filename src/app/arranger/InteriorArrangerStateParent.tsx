@@ -1,5 +1,4 @@
 import "../css/MainStyle.css";
-
 import React, {useEffect, useState} from 'react';
 import {WebGLRenderer} from 'three';
 import {InteriorArrangerMainController} from "./controllers/InteriorArrangerMainController";

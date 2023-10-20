@@ -1,0 +1,8 @@
+/* Custom CSS for the dropdown toggle and dropdown menu */
+.custom-dropdown .dropdown-toggle{
+    background-color: blue; /* Set the background color to blue */
+}
+
+.custom-dropdown .dropdown-menu {
+    top: 100%; /* Make the dropdown open downward */
+}

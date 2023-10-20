@@ -1,12 +1,13 @@
 import "../../css/MainStyle.css";
 
-import React, {memo, useLayoutEffect, useRef} from "react";
+import React, {memo, useLayoutEffect, useRef,useState} from "react";
 import {Scene, Vector3, WebGLRenderer,} from "three";
 import {MainInputHandler} from "./inputHandler/MainInputHandler";
 import {ICameraHandler} from "./ICameraHandler";
 import {ICanvasObserver} from "./ICanvasObserver";
 import {CSS2DRenderer} from "three/examples/jsm/renderers/CSS2DRenderer";
-
+import ContentContainer from "../persistance/controllers/ContentContainer";
+import Floor from "../../../Components/Panel/Floor";
 const PRIMARY_BUTTON = 0;
 
 type Pointer = {
@@ -28,7 +29,7 @@ type Props = {
  * Whole {@link Props} passed here consist of stateful objects, Component does not need to be rerendered.
  */
 const CanvasBase: React.FC<Props> = (props: Props) => {
-
+ 
     const mount = useRef<HTMLDivElement>(null);
 
     function getOffsetPosition(event: PointerEvent, width: number, height: number) {
@@ -176,9 +177,15 @@ const CanvasBase: React.FC<Props> = (props: Props) => {
             mount?.current?.removeEventListener("pointerleave", handlePointerLeave);
         };
     }, [props]);
-
-    return (
-        <div className="app-canvas" ref={mount}/>
+    
+    return (<>
+        <div>
+        <div className="app-canvas" ref={mount}  >    
+        <ContentContainer showFloor={false} showDoors={false} showWindows={false} />
+          
+        </div>
+        </div>
+        </>
     );
 
 };

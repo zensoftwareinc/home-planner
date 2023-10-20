@@ -35,4 +35,24 @@
             "z": 0
         }
     }
+    ,
+	{
+        "name": "Chairs",
+        "file": "gltf/Gear1.gltf",
+        "thumbnail": "seat/Danish.jpg",
+        "dimensions": {
+            "width": 60
+        },
+        "rotate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "offsetPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    }
+
 ]
